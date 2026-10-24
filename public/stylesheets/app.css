@@ -1,0 +1,23 @@
+#cluster-map {
+width: 100%;
+height: 400px;
+}
+
+
+ #map {
+  margin-left:-113px;
+     width:1510px;
+    height: 500px;
+position:relative;
+top:-47px;
+}
+
+.password-input {
+  margin-top:8px;
+}
+
+#register-form {
+margin-top:-10px
+}
+
+
