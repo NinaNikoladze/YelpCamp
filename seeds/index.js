@@ -1,4 +1,6 @@
-
+require('dotenv').config();
+const dns = require('dns');
+dns.setServers(['1.1.1.1', '8.8.8.8']);
 const mongoose = require('mongoose');
 const Campground = require('../model/campground')
 const cities = require('./cities')
@@ -18,11 +20,11 @@ const sample = array => array[Math.floor(Math.random()*array.length)];
 
 const seedDB = async() => {
 await Campground.deleteMany({});
-for(let i=0;i<300; i++) {
+for(let i=0;i<50; i++) {
     const random1000 = Math.floor(Math.random() *1000);
      const randNumber = Math.floor(Math.random()*20)+10;
 const camp = new Campground({
-    author:'6ad35c1afcbfb2a4930f7b2a',
+    author:'6add06ab8b9279345df2ac04',
     location:`${cities[random1000].city}, ${cities[random1000].state}`,
     title: `${sample(descriptors)} ${sample(places)}`,
     images:[
